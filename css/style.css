@@ -24,6 +24,7 @@
 {
     margin-top: 15px;
 }
+
 .navbar a
 {
     margin-left: 30px;
@@ -50,6 +51,18 @@
     cursor: pointer;
 }
 
+/* Flip card */
+.home
+{
+    display: flex;
+}
+
+.title {
+    font-size: 1.5em;
+    font-weight: 900;
+    text-align: center;
+    margin: 0;
+}
 
 .flip-card {
     margin-top: 20px;
@@ -60,13 +73,6 @@
     border-radius: 50%;
     perspective: 1000px;
     font-family: sans-serif;
-}
-  
-.title {
-    font-size: 1.5em;
-    font-weight: 900;
-    text-align: center;
-    margin: 0;
 }
 
 .flip-card-inner {
@@ -167,10 +173,6 @@
     z-index: 2;
 } */
 
-.home
-{
-    display: flex;
-}
 
 .profile-content h1
 {
@@ -212,11 +214,91 @@
 
 .hr
 {
-    width: 70%;
+    width: 100%;
     margin-top: 34px;
     color: rgb(26, 28, 29);
 }
 
+/* popup box */
+
+.popup-overlay
+{
+    background-color: gray;
+    opacity: 0.8;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    z-index: 1;
+    display: none;
+}
+
+.popup-box
+{
+    background-color: black;
+    width: 40%;
+    padding: 40px;
+    border-radius: 10px;
+    position: absolute;
+    top: 20%;
+    left: 28%;
+    align-items: center;
+    z-index: 2;
+    display: none;
+}
+
+.popup-box input
+{
+    background-color: transparent;
+    width: 85%;
+    border: none;
+    margin: 10px;
+    padding: 10px;
+    font-size: 20px;
+    border: none;
+    border-bottom: solid white 2px;
+    /* transition: 0.2s; */
+}
+
+.popup-box textarea
+{
+    width: 85%;
+    border: none;
+    margin: 10px;
+    padding: 10px;
+    font-size: 20px;
+    border: none;
+    border-bottom: solid white 2px;
+    /* transition: 0.2s; */
+}
+
+.popup-box input:focus
+{
+    outline: none;
+}
+.popup-box textarea:focus
+{
+    outline: none;
+}
+
+.popup-box button
+{
+    padding: 10px;
+    border: solid 2px;
+    margin: 10px;
+    padding: 10px 20px;
+}
+
+.popup-box button:hover
+{
+    box-shadow: 5px 4px 10px rgba(0, 255, 255, 0.5);
+    background-color: white;
+    color: black;
+}
+
+
+/* Skill section */
 .skills
 {
     display: flex;
@@ -316,87 +398,12 @@
     opacity: 1;
 }
 
-.popup-overlay
-{
-    background-color: gray;
-    opacity: 0.8;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0px;
-    left: 0px;
-    z-index: 1;
-    display: none;
-}
-
-.popup-box
-{
-    background-color: black;
-    width: 40%;
-    padding: 40px;
-    border-radius: 10px;
-    position: absolute;
-    top: 20%;
-    left: 28%;
-    align-items: center;
-    z-index: 2;
-    display: none;
-}
-
-.popup-box input
-{
-    background-color: transparent;
-    width: 85%;
-    border: none;
-    margin: 10px;
-    padding: 10px;
-    font-size: 20px;
-    border: none;
-    border-bottom: solid white 2px;
-    /* transition: 0.2s; */
-}
-
-.popup-box textarea
-{
-    width: 85%;
-    border: none;
-    margin: 10px;
-    padding: 10px;
-    font-size: 20px;
-    border: none;
-    border-bottom: solid white 2px;
-    /* transition: 0.2s; */
-}
-
-.popup-box input:focus
-{
-    outline: none;
-}
-.popup-box textarea:focus
-{
-    outline: none;
-}
-
-.popup-box button
-{
-    padding: 10px;
-    border: solid 2px;
-    margin: 10px;
-    padding: 10px 20px;
-}
-
-.popup-box button:hover
-{
-    box-shadow: 5px 4px 10px rgba(0, 255, 255, 0.5);
-    background-color: white;
-    color: black;
-}
-
+/* Project Section */
 .project-container
 {
     width: 90%;
     height: 100%;
-    margin-left: 100px;
+    margin-left: 200px;
     margin-top: 25px;
     align-items: center;
     display: flex;
@@ -445,13 +452,7 @@
     background: none;
 }
 
-.GitLink{
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    cursor: pointer;
-}
-
+/* Footer Section */
 .Bottem-info
 {
     width: 100%;
@@ -460,6 +461,22 @@
     background-color: rgba(53, 52, 52, 0.3);
     display: flex;
 } 
+
+.Bottem-image{
+    display: flex;
+    flex-direction: column;
+    background-color: transparent;
+    gap: 16px;
+    margin-top: 15px;
+    margin-left: 20px;
+}
+
+.GitLink{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    cursor: pointer;
+}
 
 .contact-address{
     width: 400px;
@@ -472,15 +489,6 @@
 .contact-address  p{
     background-color: transparent;
     margin: 20px ;
-}
-
-.Bottem-image{
-    display: flex;
-    flex-direction: column;
-    background-color: transparent;
-    gap: 16px;
-    margin-top: 15px;
-    margin-left: 20px;
 }
 
 .Eaducation
