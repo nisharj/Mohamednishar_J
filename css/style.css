@@ -4,6 +4,7 @@
     padding: 0px;
     background-color: black;
     color: white;
+    margin-right: 0px;
 }
 
 .about
@@ -43,9 +44,12 @@
 
 .about button
 {
+    position: absolute;
+    top: 45px;
+    right: 30px;
     background-color:aqua;
     padding: 10px 30px;
-    margin-left: 450px;
+    /* margin-right: 10px; */
     border-radius: 5px;
     font-size: large;
     cursor: pointer;
@@ -214,7 +218,7 @@
 
 .hr
 {
-    width: 100%;
+    /* width: 50%; */
     margin-top: 34px;
     color: rgb(26, 28, 29);
 }
@@ -316,14 +320,24 @@
 .side-head h1
 {
     rotate: 270deg;
-    margin-left: 80px;
-    margin-top: 200%;
-    padding: 20px;
     background-color: transparent;
     color: yellow;
     text-decoration: underline;
     letter-spacing: 1px;
 
+    margin-top: 200%;
+    padding-left: 20px;
+    padding-right: 60px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: transparent;
+    border-radius: 5px;
+}
+
+.side-head h1:hover
+{
+    color: white;
+    box-shadow: 5px 4px 10px rgba(0, 255, 255, 0.5);
 }
 
 .background
@@ -342,7 +356,7 @@
     background-color: transparent;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 40px 0;
+    gap: 70px 0;
 }
 
 .image
@@ -353,7 +367,13 @@
     margin: 20px;
     position: relative;
     display: inline-block;
+    
+}
 
+.image img:hover
+{
+    transform: scale(1.1);
+    box-shadow: 5px 4px 10px rgba(0, 255, 255, 0.5);
 }
 
 .image img
@@ -368,10 +388,6 @@
     background-color: black;
 }
 
-.image img:hover {
-    transform: scale(1.1);
-}
-
 .image-text 
 {
     width: 160px;
@@ -379,8 +395,7 @@
     top: 150%;
     margin-left: 15% ;
     background-color: transparent; 
-    background: none;
-    color: white;
+    /* background: none; */
     font-size: 16px;
     font-weight: bold;
     text-align: center;
@@ -389,13 +404,15 @@
     opacity: 0;
 }
 
-.image-text p{
-    background-color: transparent;
-} 
-
 .image:hover .image-text {
     visibility: visible;
     opacity: 1;
+}
+
+.image-text p:hover .image img:hover
+{
+    transform: scale(1.1);
+    box-shadow: 5px 4px 10px rgba(0, 255, 255, 0.5);
 }
 
 /* Project Section */
@@ -403,7 +420,7 @@
 {
     width: 90%;
     height: 100%;
-    margin-left: 200px;
+    margin-left: 151px;
     margin-top: 25px;
     align-items: center;
     display: flex;
